@@ -15,4 +15,7 @@ describe("fizzbuzz", () => {
     it('returns the the number if not a multiple of 3 or 5', () => {
         expect(fizzBuzz(17)).toEqual("17")
     })
+    it('returns "Buzz" if multiple of 5', () => {
+        expect(fizzBuzz(50)).toEqual('Buzz')
+    })
 });
