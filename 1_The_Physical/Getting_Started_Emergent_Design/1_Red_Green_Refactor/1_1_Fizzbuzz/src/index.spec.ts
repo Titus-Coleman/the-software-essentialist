@@ -13,6 +13,6 @@ describe("fizzbuzz", () => {
         expect(fizzBuzz(6)).toEqual('Fizz')
     })
     it('returns the the number if not a multiple of 3 or 5', () => {
-        expect(fizzBuzz(1)).toEqual(1)
+        expect(fizzBuzz(17)).toEqual("17")
     })
 });
