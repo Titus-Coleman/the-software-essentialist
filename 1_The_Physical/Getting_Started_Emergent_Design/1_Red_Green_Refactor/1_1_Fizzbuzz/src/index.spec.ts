@@ -18,4 +18,8 @@ describe("fizzbuzz", () => {
     it('returns "Buzz" if multiple of 5', () => {
         expect(fizzBuzz(50)).toEqual('Buzz')
     })
+
+    it('returns "FizzBuzz" if multiple of 3 AND 5', () => {
+        expect(fizzBuzz(15)).toEqual('FizzBuzz')
+    })
 });
