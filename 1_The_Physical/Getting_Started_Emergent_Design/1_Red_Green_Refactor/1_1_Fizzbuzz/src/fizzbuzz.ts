@@ -1,5 +1,8 @@
 
 
 export function fizzBuzz (input: number): string {
-    return "";
+    if(input === 3) {return "Fizz"; }
+    return "Buzz"
+
+        
 }
