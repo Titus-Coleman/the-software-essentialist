@@ -20,6 +20,6 @@ describe("fizzbuzz", () => {
     })
 
     it('returns "FizzBuzz" if multiple of 3 AND 5', () => {
-        expect(fizzBuzz(15)).toEqual('FizzBuzz')
+        expect(fizzBuzz(900)).toEqual('FizzBuzz')
     })
 });
