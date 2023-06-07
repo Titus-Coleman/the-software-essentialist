@@ -8,4 +8,8 @@ describe("fizzbuzz", () => {
     it('returns "Fizz" on 3', () => {
         expect(fizzBuzz(3)).toEqual('Fizz')
     })
+
+    it('returns "Fizz" on a multiple of 3', () => {
+        expect(fizzBuzz(6)).toEqual('Fizz')
+    })
 });
