@@ -8,7 +8,7 @@ export function fizzBuzz (input: number): string {
     } else if (input % 3 === 0) {
         return "Fizz";
     }
-    return input.toString();
+    return `${input.toString()} is not a multiple of 3 or 5`;
 
         
 }
