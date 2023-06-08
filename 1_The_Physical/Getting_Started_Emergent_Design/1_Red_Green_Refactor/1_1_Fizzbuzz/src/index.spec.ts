@@ -1,4 +1,4 @@
-import {fizzBuzz} from './fizzbuzz';
+import {fizzBuzz, BadInputError} from './fizzbuzz';
 
 describe("fizzbuzz", () => {
     it('returns a string', () => {
@@ -24,6 +24,6 @@ describe("fizzbuzz", () => {
         expect(fizzBuzz(-19)).toEqual('-19 is not a multiple of 3 or 5')
     })
     it('Throws an error stating "input is not a valid number"', () => {
-        expect(fizzBuzz("-19")).toThrow(new Error("input is not a valid number"))
+        expect(() => {fizzBuzz("-19")}).toThrowError(new BadInputError("input is not a valid number"))
     })
 });
