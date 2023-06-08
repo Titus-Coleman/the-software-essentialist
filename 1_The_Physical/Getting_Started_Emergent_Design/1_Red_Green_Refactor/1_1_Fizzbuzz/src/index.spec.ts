@@ -27,4 +27,16 @@ describe("fizzbuzz", () => {
       it("does not accept numbers over 100 such as 101", () => {
         expect(() => fizzBuzz(101)).toThrow("Too Large");
       });
+
+      it("returns multiples of three such as 3, 6, 9, and 12 as fizz", () => {
+        [3, 6, 9, 12]
+          .map((multiple) => fizzBuzz(multiple))
+          .forEach((m) => expect(m).toEqual("Fizz"));
+      });
+    
+      it("returns multiples of five such as 5, 10, and 20 as buzz", () => {
+        [5, 10, 20]
+          .map((multiple) => fizzBuzz(multiple))
+          .forEach((m) => expect(m).toEqual("Buzz"));
+      });
 });
