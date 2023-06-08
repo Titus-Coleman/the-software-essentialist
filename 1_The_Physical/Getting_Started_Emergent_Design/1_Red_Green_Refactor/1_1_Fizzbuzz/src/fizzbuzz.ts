@@ -7,9 +7,11 @@ export class BadInputError extends Error {
     }
 }
 
-export function fizzBuzz (input: any): string | Error{
-    if(typeof input != 'number') {
-        throw new BadInputError("input is not a valid number")
+export function fizzBuzz (input: number): string | Error{
+    if(input < 0) {
+        throw new BadInputError("Too Small")
+    } else if (input > 100) {
+        throw new BadInputError("Too Large")
     }
 
     if ((input % 3 === 0) && (input % 5 === 0))  {

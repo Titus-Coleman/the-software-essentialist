@@ -17,13 +17,14 @@ describe("fizzbuzz", () => {
     })
 
     it('returns "FizzBuzz" if multiple of 3 AND 5', () => {
-        expect(fizzBuzz(900)).toEqual('FizzBuzz')
+        expect(fizzBuzz(90)).toEqual('FizzBuzz')
     })
 
-    it('returns a string stating the input is not a multiple of 3 or 5', () => {
-        expect(fizzBuzz(-19)).toEqual('-19 is not a multiple of 3 or 5')
-    })
-    it('Throws an error stating "input is not a valid number"', () => {
-        expect(() => {fizzBuzz("-19")}).toThrowError(new BadInputError("input is not a valid number"))
-    })
+    it("doesnt accept numbers less than 1 such as -1", () => {
+        expect(() => fizzBuzz(-1)).toThrow("Too Small");
+      });
+    
+      it("does not accept numbers over 100 such as 101", () => {
+        expect(() => fizzBuzz(101)).toThrow("Too Large");
+      });
 });
