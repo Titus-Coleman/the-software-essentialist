@@ -1,4 +1,8 @@
+import { palindromeChecker } from "./index"
 
-describe('palindrome checker', () => {
 
+describe("Palindrome Checker", () => {
+    it('"mom" returns true', () =>{
+        expect(palindromeChecker("mom")).toBeTruthy()
+    })
 })
