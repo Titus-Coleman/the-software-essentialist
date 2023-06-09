@@ -38,6 +38,11 @@ describe('password validator', () => {
     let passwordValidator = new PasswordValidator("Jordanisg0at");
     expect(passwordValidator.check()).toBeInstanceOf(Object);
   })
+
+  test("Password is checked, invalid and returns object with error key", () => {
+    let passwordValidator = new PasswordValidator("mj");
+    expect(passwordValidator.check()).toHaveProperty("error");
+  })
 })
 
 
