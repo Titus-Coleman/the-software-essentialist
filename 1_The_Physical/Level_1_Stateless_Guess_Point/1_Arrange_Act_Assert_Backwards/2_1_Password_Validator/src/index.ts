@@ -18,7 +18,13 @@ export class PasswordValidator {
     }
 
     check() {
-        //TODO iterate through all methods and output each result as object values.
-        return {}
-    }
+        // Still needs to return error key with message
+        const result = {
+          isValidLength: this.isValidLength(),
+          containsDigit: this.containsDigit(),
+          containsUppercase: this.containsUppercase()
+  
+        };
+        return result;
+      }
 }

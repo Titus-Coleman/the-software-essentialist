@@ -35,7 +35,7 @@ describe('password validator', () => {
   })
 
   test("Password is checked and returns object", () => {
-    let passwordValidator = new PasswordValidator("leBronisg0at");
+    let passwordValidator = new PasswordValidator("Jordanisg0at");
     expect(passwordValidator.check()).toBeInstanceOf(Object);
   })
 })
