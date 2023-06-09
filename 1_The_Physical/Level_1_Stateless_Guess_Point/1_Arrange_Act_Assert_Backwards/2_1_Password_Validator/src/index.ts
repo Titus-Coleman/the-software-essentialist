@@ -10,12 +10,10 @@ export class PasswordValidator {
     }
 
     containsDigit(): boolean {
-        const regex = /\d/;
-        return regex.test(this.password) ? true : false
+        return (/\d/).test(this.password) ? true : false
     }
 
     containsUppercase(): boolean {
-        // const regex = TODO ;
         return (/[A-Z]/).test(this.password) ? true : false
     }
 }
