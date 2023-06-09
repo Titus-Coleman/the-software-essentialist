@@ -40,7 +40,7 @@ describe('password validator', () => {
   })
 
   test("Password is checked, invalid and returns object with error key", () => {
-    let passwordValidator = new PasswordValidator("mj");
+    let passwordValidator = new PasswordValidator("mf");
     expect(passwordValidator.check()).toHaveProperty("error");
   })
 })

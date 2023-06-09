@@ -17,14 +17,28 @@ export class PasswordValidator {
         return (/[A-Z]/).test(this.password) ? true : false
     }
 
+   checkObjectValues(obj: any) {
+        obj.error = [];
+      
+        for (let key in obj) {
+          if (!obj[key]) {
+            obj.error.push("Error: " + key + " is false.");
+          }
+        }
+      
+        if (obj.error.length === 0) {
+          delete obj.error; // Remove the errors key if there are no errors
+        }
+        return obj;
+      }
+
     check() {
         // Still needs to return error key with message
         const result =  {
           isValidLength: this.isValidLength(),
           containsDigit: this.containsDigit(),
           containsUppercase: this.containsUppercase()
-  
         };
-        return result;
+        return this.checkObjectValues(result)
       }
 }
