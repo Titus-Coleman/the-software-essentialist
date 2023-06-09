@@ -7,7 +7,7 @@ describe('password validator', () => {
   })
 
   test("Password is under 5 characters and over 15 characters long - invalid", () => {
-    let passwordValidator = new PasswordValidator("hello20990e120e909201109");
+    let passwordValidator = new PasswordValidator("thePhysical1234567");
     expect(passwordValidator.isValidLength()).toBeFalsy();
   })
 
@@ -21,7 +21,7 @@ describe('password validator', () => {
     expect(passwordValidator.containsDigit()).toBeTruthy();
   })
   test("Password does not contain at least one digit", () => {
-    let passwordValidator = new PasswordValidator("password");
+    let passwordValidator = new PasswordValidator("maxwellTheBe");
     expect(passwordValidator.containsDigit()).toBeFalsy();
   })
 
@@ -30,7 +30,7 @@ describe('password validator', () => {
     expect(passwordValidator.containsUppercase()).toBeTruthy();
   })
   test("Password does not contain at least one uppercase letter", () => {
-    let passwordValidator = new PasswordValidator("lebronisgoat");
+    let passwordValidator = new PasswordValidator("maxwell1_c");
     expect(passwordValidator.containsUppercase()).toBeFalsy();
   })
 
@@ -42,6 +42,11 @@ describe('password validator', () => {
   test("Password is checked, invalid and returns object with error key", () => {
     let passwordValidator = new PasswordValidator("mf");
     expect(passwordValidator.check()).toHaveProperty("error");
+  })
+
+  test("Password is checked, valid and returns object without error key", () => {
+    let passwordValidator = new PasswordValidator("Messi1nMiami");
+    expect(passwordValidator.check()).not.toHaveProperty("error");
   })
 })
 

@@ -33,7 +33,6 @@ export class PasswordValidator {
       }
 
     check() {
-        // Still needs to return error key with message
         const result =  {
           isValidLength: this.isValidLength(),
           containsDigit: this.containsDigit(),
