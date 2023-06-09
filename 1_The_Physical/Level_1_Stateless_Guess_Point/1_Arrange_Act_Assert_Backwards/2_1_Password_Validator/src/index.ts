@@ -6,6 +6,9 @@ export class PasswordValidator {
     }
 
     isValidLength(): boolean {
+        if ((this.password.length > 5) && this.password.length < 15 ){
+        return true
+        }
         return false
-    }
+}
 }
