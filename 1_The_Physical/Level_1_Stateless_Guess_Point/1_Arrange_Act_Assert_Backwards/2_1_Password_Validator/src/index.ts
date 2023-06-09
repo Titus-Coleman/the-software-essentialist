@@ -6,9 +6,11 @@ export class PasswordValidator {
     }
 
     isValidLength(): boolean {
-        if ((this.password.length > 5) && this.password.length < 15 ){
-        return true
-        }
-        return false
-}
+      return this.password.length > 5 && this.password.length < 15 ? true : false
+    }
+
+    containsDigit(): boolean {
+        const regex = /\d/;
+        return regex.test(this.password) ? true : false
+    }
 }
