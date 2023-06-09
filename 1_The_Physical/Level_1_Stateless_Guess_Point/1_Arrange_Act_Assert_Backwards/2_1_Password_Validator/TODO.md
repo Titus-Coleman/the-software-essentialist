@@ -1,0 +1,4 @@
+- Create a class called PasswordValidator
+  - Determine input type = String
+  - Create methods for each feature
+    -
