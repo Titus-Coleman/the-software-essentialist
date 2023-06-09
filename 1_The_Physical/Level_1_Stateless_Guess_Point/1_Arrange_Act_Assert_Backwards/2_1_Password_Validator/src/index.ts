@@ -18,6 +18,7 @@ export class PasswordValidator {
     }
 
     check() {
-        return 
+        //TODO iterate through all methods and output each result as object values.
+        return {}
     }
 }
