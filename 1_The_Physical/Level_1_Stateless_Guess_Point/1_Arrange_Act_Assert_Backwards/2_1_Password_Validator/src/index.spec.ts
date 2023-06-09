@@ -33,6 +33,11 @@ describe('password validator', () => {
     let passwordValidator = new PasswordValidator("lebronisgoat");
     expect(passwordValidator.containsUppercase()).toBeFalsy();
   })
+
+  test("Password is checked and returns object", () => {
+    let passwordValidator = new PasswordValidator("leBronisg0at");
+    expect(passwordValidator.check()).toBeInstanceOf(Object);
+  })
 })
 
 

@@ -16,4 +16,8 @@ export class PasswordValidator {
     containsUppercase(): boolean {
         return (/[A-Z]/).test(this.password) ? true : false
     }
+
+    check() {
+        return 
+    }
 }
