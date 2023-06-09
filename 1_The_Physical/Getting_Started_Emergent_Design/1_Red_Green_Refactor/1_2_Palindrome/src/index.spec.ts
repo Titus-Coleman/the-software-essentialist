@@ -9,6 +9,12 @@ describe("Palindrome Checker", () => {
         .forEach((m) => expect(m).toBeTruthy())
     })
 
+    it("Palindromes return false", () => {
+        ["Momx","Never Odd or Even1"]
+            .map((word) => palindromeChecker(word))
+            .forEach((m) => expect(m).toBeFalsy())
+        })
+
     // it('"mom" returns true', () =>{
     //     expect(palindromeChecker("mom")).toBeTruthy()
     // })
@@ -21,9 +27,9 @@ describe("Palindrome Checker", () => {
     //     expect(palindromeChecker("MoM")).toBeTruthy()
     // })
 
-    it('"Momx" returns false', () =>{
-        expect(palindromeChecker("Momx")).toBeFalsy()
-    })
+    // it('"Momx" returns false', () =>{
+    //     expect(palindromeChecker("Momx")).toBeFalsy()
+    // })
 
     // it('"xMomx" returns true', () =>{
     //     expect(palindromeChecker("xMomx")).toBeTruthy()
@@ -37,11 +43,11 @@ describe("Palindrome Checker", () => {
     //     expect(palindromeChecker("Never Odd or Even")).toBeTruthy()
     // })
 
-    it('"Never Odd or Even1" returns false', () =>{
-        expect(palindromeChecker("Never Odd or Even1")).toBeFalsy()
-    })
+    // it('"Never Odd or Even1" returns false', () =>{
+    //     expect(palindromeChecker("Never Odd or Even1")).toBeFalsy()
+    // })
 
-    it('"1Never Odd or Even1" returns true', () =>{
-        expect(palindromeChecker("1Never Odd or Even1")).toBeTruthy()
-    })
+    // it('"1Never Odd or Even1" returns true', () =>{
+    //     expect(palindromeChecker("1Never Odd or Even1")).toBeTruthy()
+    // })
 })
