@@ -33,4 +33,8 @@ describe("Palindrome Checker", () => {
     it('"Never Odd or Even1" returns false', () =>{
         expect(palindromeChecker("Never Odd or Even1")).toBeFalsy()
     })
+
+    it('"1Never Odd or Even1" returns true', () =>{
+        expect(palindromeChecker("1Never Odd or Even1")).toBeTruthy()
+    })
 })
