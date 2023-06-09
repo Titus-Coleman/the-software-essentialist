@@ -9,4 +9,8 @@ describe("Palindrome Checker", () => {
     it('"Mom" returns true', () =>{
         expect(palindromeChecker("Mom")).toBeTruthy()
     })
+
+    it('"MoM" returns true', () =>{
+        expect(palindromeChecker("MoM")).toBeTruthy()
+    })
 })
