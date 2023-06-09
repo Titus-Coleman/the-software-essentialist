@@ -29,10 +29,10 @@ describe('password validator', () => {
     let passwordValidator = new PasswordValidator("Password1");
     expect(passwordValidator.containsUppercase()).toBeTruthy();
   })
-  // test("Password does not contain at least one uppercase letter", () => {
-  //   let passwordValidator = new PasswordValidator("lebronisgoat");
-  //   expect(passwordValidator.containsUppercase()).toBeFalsy();
-  // })
+  test("Password does not contain at least one uppercase letter", () => {
+    let passwordValidator = new PasswordValidator("lebronisgoat");
+    expect(passwordValidator.containsUppercase()).toBeFalsy();
+  })
 })
 
 
