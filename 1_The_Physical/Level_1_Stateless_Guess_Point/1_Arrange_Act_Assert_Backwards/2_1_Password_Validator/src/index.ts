@@ -1,43 +1,27 @@
-
 export class PasswordValidator {
-    password: string;
-    constructor(password: string) {
-        this.password = password;
+    static isValidLength(password: string): boolean {
+        return password.length > 5 && password.length < 15;
     }
 
-    isValidLength(): boolean {
-      return this.password.length > 5 && this.password.length < 15 ? true : false
+    static containsDigit(password: string): boolean {
+        return (/\d/g).test(password);
     }
 
-    containsDigit(): boolean {
-        return (/\d/).test(this.password) ? true : false
+    static containsUppercase(password: string): boolean {
+        return (/[A-Z]/g).test(password);
     }
 
-    containsUppercase(): boolean {
-        return (/[A-Z]/).test(this.password) ? true : false
-    }
-
-   checkObjectValues(obj: any) {
-        obj.error = [];
-      
-        for (let key in obj) {
-          if (!obj[key]) {
-            obj.error.push("Error: " + key + " is false.");
-          }
-        }
-      
-        if (obj.error.length === 0) {
-          delete obj.error; // Remove the errors key if there are no errors
-        }
-        return obj;
-      }
-
-    check() {
-        const result =  {
-          isValidLength: this.isValidLength(),
-          containsDigit: this.containsDigit(),
-          containsUppercase: this.containsUppercase()
+    static check(password: string) {
+        const result = {
+            isValidLength: PasswordValidator.isValidLength(password),
+            containsDigit: PasswordValidator.containsDigit(password),
+            containsUppercase: PasswordValidator.containsUppercase(password)
         };
-        return this.checkObjectValues(result)
-      }
+
+        const errors = Object.entries(result)
+            .filter(([key, value]) => !value)
+            .map(([key]) => `Error: ${key} is false.`);
+
+       return (errors.length > 0) ? { error: errors } : result;
+    }
 }
